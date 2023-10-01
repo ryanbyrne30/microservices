@@ -1,5 +1,11 @@
 syntax = "proto3";
 
+service BreadService {
+  rpc GetAllBreads (Empty) returns (BreadList) {}
+  rpc BuyBread (BuyBreadRequest) returns (BuyBreadResponse) {}
+  rpc StockBread (StockBreadRequest) returns (StockBreadResponse) {}
+}
+
 message Bread {
   string sku = 1;
   string type = 2;
@@ -7,12 +13,24 @@ message Bread {
   int64 stock = 4;
 }
 
-service BreadService {
-  rpc GetAllBreads (Empty) returns (BreadList) {}
+message BreadList {
+  repeated Bread bread = 1;
 }
 
 message Empty {}
 
-message BreadList {
-  repeated Bread bread = 1;
+message BuyBreadRequest {
+  string sku = 1;
+}
+message BuyBreadResponse {
+  Bread bread = 1;
+}
+
+
+message StockBreadRequest {
+  string sku = 1;
+  int64 amount = 2;
+}
+message StockBreadResponse {
+  string status = 1;
 }

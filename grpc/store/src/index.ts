@@ -1,10 +1,11 @@
 import { Server, ServerCredentials } from "@grpc/grpc-js";
-import { getAllBreads } from "./bread";
+import { getAllBreads, buyBread } from "./bread";
 import { BreadService } from "./protos/bread_grpc_pb";
 
 const server = new Server();
 server.addService(BreadService, {
   getAllBreads,
+  buyBread,
 });
 
 const address = "0.0.0.0:4500";

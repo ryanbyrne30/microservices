@@ -1,4 +1,4 @@
-// source: protos/bread.proto
+// source: store/protos/bread.proto
 /**
  * @fileoverview
  * @enhanceable
