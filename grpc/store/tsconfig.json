@@ -5,6 +5,7 @@
     "target": "esnext",
     "moduleResolution": "bundler",
     "moduleDetection": "force",
+    "esModuleInterop": true,
     "allowImportingTsExtensions": true,
     "noEmit": true,
     "composite": true,
@@ -15,8 +16,11 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "allowJs": true,
-    "types": [
-      "bun-types" // add Bun global
-    ]
+    "baseUrl": "./src"
+  },
+  "include": ["src/**/*.{ts|js}"],
+  "excluse": ["node_modules"],
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
   }
 }
