@@ -25,3 +25,8 @@ Generate services using `grpc_tools_node_protoc`
 ```
 ./node_modules/.bin/grpc_tools_node_protoc --js_out=import_style=commonjs,binary:src/ --grpc_out=generate_package_definition:src/ protos/bread.proto
 ```
+
+# References
+
+- https://dev.to/devaddict/use-grpc-with-node-js-and-typescript-3c58
+- https://medium.com/@ahmadb/google-protocol-buffers-with-websockets-over-https-in-node-js-express-7ea78157394e

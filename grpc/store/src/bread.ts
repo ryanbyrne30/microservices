@@ -4,6 +4,8 @@ export function getAllBreads(
   _call: ServerUnaryCall<proto.Empty, proto.BreadList>,
   callback: sendUnaryData<proto.BreadList>
 ) {
+  console.log("Received request for bread...");
+
   const response = new proto.BreadList();
 
   const breads = [

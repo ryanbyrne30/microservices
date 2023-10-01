@@ -1,7 +1,6 @@
 {
   "name": "store",
   "module": "src/index.ts",
-  "type": "module",
   "scripts": {
     "dev": "ts-node src/index.ts"
   },
