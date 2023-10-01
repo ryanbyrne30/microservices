@@ -1,0 +1,8 @@
+{
+  "name": "client",
+  "module": "index.ts",
+  "type": "module",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.9.4"
+  }
+}

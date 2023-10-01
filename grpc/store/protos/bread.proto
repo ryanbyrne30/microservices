@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+message Bread {
+  string sku = 1;
+  string type = 2;
+  int64 price = 3;
+  int64 stock = 4;
+}
+
+service BreadService {
+  rpc GetAllBreads (Empty) returns (BreadList) {}
+}
+
+message Empty {}
+
+message BreadList {
+  repeated Bread bread = 1;
+}
